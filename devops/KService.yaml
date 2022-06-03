@@ -8,9 +8,9 @@ spec:
       name: acme-bookstore-admin-ui-1
     spec:
       containers:
-        - image: ivan2yk/acme-bookstore-admin-ui:1
+        - image: ivan2yk/acme-bookstore-admin-ui:2
           env:
             - name: ACME_BOOKSTORE_PRODUCT_SERVICE
               value: "http://acme-bookstore-product.default.svc.cluster.local/books"
             - name: SERVER_PORT
-              value: 8080
+              value: "8080"
