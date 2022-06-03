@@ -1,0 +1,16 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: acme-bookstore-admin-ui
+spec:
+  template:
+    metadata:
+      name: acme-bookstore-admin-ui-1
+    spec:
+      containers:
+        - image: ivan2yk/acme-bookstore-admin-ui:1
+          env:
+            - name: ACME_BOOKSTORE_PRODUCT_SERVICE
+              value: "http://acme-bookstore-product.default.svc.cluster.local/books"
+            - name: SERVER_PORT
+              value: 8080
