@@ -4,8 +4,6 @@ metadata:
   name: acme-bookstore-admin-ui
 spec:
   template:
-    metadata:
-      name: acme-bookstore-admin-ui-1
     spec:
       containers:
         - image: ivan2yk/acme-bookstore-admin-ui:2
